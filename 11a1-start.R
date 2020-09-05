@@ -13,7 +13,7 @@ women
 
 ?AirPassengers
 data() # datasets available for use
-
+Nile
 library()  # libraries currently loaded
 
 ?mean  #help
@@ -24,9 +24,9 @@ x
 x <- c(0:10, 50,100,200)
 x
 mean(x)
-xm <- mean(x)
+?xm <- mean(x)
 xm
-mean(x, trim = 0.10)
+?mean(x, trim = 0.10)
 x=c(1,1,1,1,5,5,5,5,7,7)
 mean(x)
 mean(x, trim=.3)

@@ -1,7 +1,7 @@
 #Matrices in R
 #Matrix is a two dimensional data structure in R programming. Matrix is similar to vector but additionally contains the dimension attribute. All attributes of an object can be checked with the attributes() function (dimension can be checked directly with the dim() function).
 #vector ----
-(v1 = 1:24) #assignandprint
+(v1 = 1:24)
 
 dim(v1)
 attributes(v1)
@@ -20,7 +20,6 @@ dim(m3) #dimensions rows * cols
 attributes(m1)  #properties
 class(m1)  #matrix, array
 
-?attributes
 m1
 dimnames(m1)= list(c('Jan','Feb','Mar','Apr'), paste('coy',1:6, sep=''))
 m1 #4 months, 6 coys
@@ -44,10 +43,10 @@ m1[,-c(2,5)]  #what is this
 m1[1:24]  #matrix as vector
 class(m1[1:24])  #integer
 
-attributes(m1)
+
 m1
 m1 > 5 & m1 < 15  #which position are True & False
-m1[m1 > 5 & m1 < 15, drop=FALSE] # values
+m1[m1 > 5 & m1 < 15] # values
 m1[m1 > 5 & m1 < 15] = 100  #change values
 m1
 

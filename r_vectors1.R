@@ -9,7 +9,7 @@ x1
 #vector of values 1, 5, 11, 30
 x2 = c(1, 5, 11, 30)
 x2
-
+?c
 #vector with integer values starting from 5 to 60 with a step of 3
 x3 = seq(from=5, to=60, by=3)
 x3
@@ -32,7 +32,9 @@ length(x7a)
 x7b = seq(from=10, to=20, along.with = x7a)
 x7b
 length(x7b)
-
+x7c
+x7c = seq(from=10, to=20, length.out= 16)
+length(x7c)
 #multiple functions-------
 #vector drawn randomly from seq of values from 10 to 50
 #sort the data; print the data in reverse order
@@ -40,7 +42,7 @@ x8a = 10:50
 x8a
 x8b = sample(x8a)
 x8b
-
+?sample
 sort(x8b)
 rev(x8b)
 
@@ -56,6 +58,7 @@ x8b
 #basic stats - mean, median of values
 mean(x8b)
 median(x8b)
+sort(x8b)[21]
 #min and max
 min(x8b)
 max(x8b)
@@ -80,14 +83,14 @@ y2b
 table(y2b)  #count of M & F
 
 # Male % approx 60%
-y2c = sample(x=y2a, size=100, replace=T, prob=c(.6,.4))
+y2c = sample(x=y2a, size=70, replace=T, prob=c(.6,.4))
 y2c
 table(y2c)  #count of M & F
 prop.table(table(y2c))  #count in Proportion
 
 #barplot & pie
-barplot(table(y2c), col=1:2)
-pie(table(y2c), col=1:2)
+barplot(table(y2c), col=3:2)
+pie(table(y2c), col=3:2)
 
 #list only males
 y2c[y2c=='M']
@@ -117,7 +120,7 @@ n2
 range(n2)
 
 #round the marks to 1 decimal place
-n2 = round(n2,digits=1)
+n2 = round(n2,digits=-1)
 n2
 
 #mean and std dev, median, mode,summary, quantile
@@ -128,7 +131,7 @@ modeest::mlv(n2, method = "mfv")  #mode
 range(n2)
 summary(n2)
 quantile(n2)  #4 quantiles
-quantile(n2, p=c(.1, .7))  #10th & 70th percentile
+quantile(n2, p=c(.1, .5,.7))  #10th & 70th percentile
 
 library(moments)
 moments::skewness(n2)
@@ -147,7 +150,7 @@ sum(n2 > 65 & n2 < 72)
 mean(n2[n2 > 75 & n2 < 80])
 
 #class interval : 50-65, 65-75, 75-85, > 85
-breaks1 = c(0,50,65,75,85,100)
+breaks1 = c(0,50,65,75,80,85,100)
 n2cut = cut(n2, breaks= breaks1)
 table(n2cut)
 
