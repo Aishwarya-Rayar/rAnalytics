@@ -11,7 +11,9 @@ url2 = "https://docs.google.com/spreadsheets/d/1Md_ro2t3M7nA9JMH1DsE12jfeX7qq-UP
 
 data2 = gsheet2tbl(url2)
 data2
-
+url3='https://docs.google.com/spreadsheets/d/1Md_ro2t3M7nA9JMH1DsE12jfeX7qq-UPw6p8WQd6A2Y/edit#gid=2051155174'
+data3=gsheet2tbl(url3)
+head(data3)
 #private  gsheets
 library(googlesheets4)
 url1 = 'docs.google.com/spreadsheets/d/1I9mJsS5QnXF2TNNntTy-HrcdHmIF9wJ8ONYvEJTXSNo'

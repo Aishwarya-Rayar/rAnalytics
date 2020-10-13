@@ -3,6 +3,7 @@
 #Read from CSV file in PC
 head(mtcars)
 rownames(mtcars)
+colnames(mtcars)
 write.csv(mtcars, "./data/mtcarsF.csv", row.names=F) #without rownames
 write.csv(mtcars, "./data/mtcarsT.csv", row.names=T) #with rownames
 
@@ -21,10 +22,10 @@ str(readmtcars)
 class(readmtcars)
 head(readmtcars)
 
-read2 = read.table(file="./data/iris.csv", header = TRUE,sep = ",")
+read2 = read.table(file="./data/irisF.csv", header = TRUE,sep = ",")
 str(read2); class(read2)
 head(read2)
-read3 = read.delim(file="./data/iris.csv", header = TRUE,sep = ",")
+read3 = read.delim(file="./data/irisT.csv", header = TRUE,sep = ",")
 str(read3) ; class(read3)
 head(read3)
 
@@ -38,7 +39,9 @@ head(read4)
 # From URL : Read CSV from Web----
 read_web1 = read.csv('http://www.stats.ox.ac.uk/pub/datasets/csb/ch11b.dat')
 head(read_web1)
-
+url='https://raw.githubusercontent.com/DUanalytics/datasets/master/csv/Churn.csv'
+data=read.csv(url)
+head(data)
 library(data.table)
 read_web2 = fread("http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv")
 head(read_web2)
